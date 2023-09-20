@@ -1,0 +1,52 @@
+/* Header styling */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  main{
+  margin:10px;
+  }
+
+  /* Select input styling */
+.MuiFormControl-root {
+    width: 200px;
+  }
+  
+  /* Dropdown label styling */
+  .MuiInputLabel-root {
+    color: #fff;
+  }
+  
+  /* Dropdown select styling */
+  .MuiSelect-root,
+  .MuiSelect-select.MuiSelect-select {
+    color: #fff;
+  }
+  
+  input{
+    padding: 0px 10px;;
+  }
+  
+  /* Dropdown option styling */
+  .MuiMenuItem-root {
+    color: #333;
+    /* Text color for dropdown options */
+  }
+  
+  /* Dropdown icon styling */
+  .MuiSelect-icon {
+    fill: #fff;
+    /* Icon color for the dropdown arrow */
+  }
+
+  .avatar{
+    display:flex;
+    padding: 2px;
+    align-items: center;
+    flex-direction: column;
+  }

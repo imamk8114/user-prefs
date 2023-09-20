@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #2196F3;
+  --secondary-color:#494646;
+}
+
+.App {
+  text-align: center;
+  transition: background-color 0.3s;
+}
