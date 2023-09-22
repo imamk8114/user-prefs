@@ -17,7 +17,7 @@ exports.login = async (req, res) => {
     const authtoken = await userService.authenticateUser(email, password);
 
     // Set the JWT token in an HttpOnly cookie
-    res.cookie('auth-token', authtoken, { httpOnly: true });
+    res.cookie('authToken', authtoken, {  sameSite: 'None'});
 
     res.json({ success: true, authtoken });
   } catch (error) {

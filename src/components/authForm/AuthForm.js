@@ -30,16 +30,18 @@ const AuthForm = ({ onLogin }) => {
         });
         const json = await response.json()
         console.log(response)
+
         if (json.success || response.ok){
             const getUser = await fetch(`http://localhost:5000/api/auth/get-user`,{
                 method: 'GET',
+                credentials:'include',
                 headers: {
-                'auth-token': json.authtoken,
-                },
+                  'Content-Type': 'application/json',
+                }        
             })
             const user = await getUser.json();
-            onLogin(user)
-            localStorage.setItem('token', json.authtoken); 
+            console.log('after get-user',user)
+            onLogin(user) 
         }
         else{
             alert("Invalid credentials");

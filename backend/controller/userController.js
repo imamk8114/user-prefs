@@ -40,7 +40,7 @@ const createUser = async (req, res) => {
     }
 
     const authtoken = jwt.sign(data, config.JWT_SECRET);
-    res.cookie('auth-token', authtoken, { httpOnly: true });
+    res.cookie('authToken', authtoken, { httpOnly: true });
 
     res.json({ authtoken });
 

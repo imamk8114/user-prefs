@@ -49,7 +49,6 @@ function App() {
             method: 'PUT',
             headers: {
             'Content-Type': 'application/json',
-            'auth-token': localStorage.getItem('token'),
             },
             body: JSON.stringify({color:theme}),
         });

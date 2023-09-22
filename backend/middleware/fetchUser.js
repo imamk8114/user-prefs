@@ -2,7 +2,8 @@ var jwt = require('jsonwebtoken');
 const JWT_SECRET = 'Imamisagoodb$oy';
 
 const fetchuser = (req, res, next) => {
-    const token = req.header('auth-token');
+    const token = req.cookies.authToken;
+    console.log(token)
     if (!token) {
         return res.status(401).send({ error: "Please authenticate using a valid token" });
     }
